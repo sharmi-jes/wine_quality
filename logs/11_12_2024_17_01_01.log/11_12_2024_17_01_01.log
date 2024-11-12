@@ -1,0 +1,14 @@
+[ 2024-11-12 17:01:03,647 ] 32 root - INFO - read the data
+[ 2024-11-12 17:01:03,662 ] 35 root - INFO - create a directory
+[ 2024-11-12 17:01:03,682 ] 40 root - INFO - split the data
+[ 2024-11-12 17:01:03,682 ] 44 root - INFO - pass the train data its path
+[ 2024-11-12 17:01:03,756 ] 46 root - INFO - pass the test data into its path
+[ 2024-11-12 17:01:03,810 ] 147 root - INFO - read the train and test data
+[ 2024-11-12 17:01:03,835 ] 152 root - INFO - take the preprocessor for the transfer train and test data as a same format
+[ 2024-11-12 17:01:03,835 ] 115 root - INFO - get the data transformation based on the data
+[ 2024-11-12 17:01:03,835 ] 155 root - INFO - drop the traget col from the train and test
+[ 2024-11-12 17:01:03,835 ] 161 root - INFO - apply preprocessor obj for input triana nd test data
+[ 2024-11-12 17:01:03,851 ] 165 root - INFO - combine the targeta nd inpendent features
+[ 2024-11-12 17:01:03,851 ] 26 root - INFO - Splitting train and test arrays into features and labels.
+[ 2024-11-12 17:01:03,851 ] 39 root - INFO - Evaluating models.
+[ 2024-11-12 17:01:03,898 ] 43 root - INFO - Best model score: 0.584375

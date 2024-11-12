@@ -2,11 +2,15 @@ import sys
 import os
 import pandas as pd
 import numpy as np
+from ..exception import CustomException
 from src.exception import CustomException
 from src.logger import logging
 
 from src.components.data_transformation import DataTransformation
 from src.components.data_transformation import DataTransformationConfig
+
+from src.components.model_training import ModelTrainer
+from src.components.model_training import ModelTrainerConfig
 
 from sklearn.model_selection import train_test_split
 from dataclasses import dataclass
@@ -57,4 +61,7 @@ if __name__=="__main__":
     train_data.to_csv("temp_train.csv", index=False)
     test_data.to_csv("temp_test.csv", index=False)
 
-    transformer.intiate_data_transformation("temp_train.csv", "temp_test.csv")
+    train_arr,test_arr,_=transformer.intiate_data_transformation("temp_train.csv", "temp_test.csv")
+
+    model=ModelTrainer()
+    print(model.initiate_model_trainer(train_arr,test_arr))
