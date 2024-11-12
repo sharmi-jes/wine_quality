@@ -1,0 +1,12 @@
+README.md
+setup.py
+src/__init__.py
+src/exception.py
+src/logger.py
+src/utils.py
+src/components/__init__.py
+src/components/data_ingestion.py
+src/wine_quality.egg-info/PKG-INFO
+src/wine_quality.egg-info/SOURCES.txt
+src/wine_quality.egg-info/dependency_links.txt
+src/wine_quality.egg-info/top_level.txt

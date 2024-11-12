@@ -1,0 +1,11 @@
+[ 2024-11-12 14:34:54,700 ] 28 root - INFO - read the data
+[ 2024-11-12 14:34:54,708 ] 31 root - INFO - create a directory
+[ 2024-11-12 14:34:54,719 ] 36 root - INFO - split the data
+[ 2024-11-12 14:34:54,728 ] 40 root - INFO - pass the train data its path
+[ 2024-11-12 14:34:54,735 ] 42 root - INFO - pass the test data into its path
+[ 2024-11-12 14:34:54,762 ] 147 root - INFO - read the train and test data
+[ 2024-11-12 14:34:54,798 ] 152 root - INFO - take the preprocessor for the transfer train and test data as a same format
+[ 2024-11-12 14:34:54,798 ] 115 root - INFO - get the data transformation based on the data
+[ 2024-11-12 14:34:54,798 ] 155 root - INFO - drop the traget col from the train and test
+[ 2024-11-12 14:34:54,798 ] 161 root - INFO - apply preprocessor obj for input triana nd test data
+[ 2024-11-12 14:34:54,810 ] 165 root - INFO - combine the targeta nd inpendent features

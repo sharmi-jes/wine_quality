@@ -1,0 +1,6 @@
+[ 2024-11-12 14:26:06,446 ] 28 root - INFO - read the data
+[ 2024-11-12 14:26:06,451 ] 31 root - INFO - create a directory
+[ 2024-11-12 14:26:06,466 ] 36 root - INFO - split the data
+[ 2024-11-12 14:26:06,475 ] 40 root - INFO - pass the train data its path
+[ 2024-11-12 14:26:06,485 ] 42 root - INFO - pass the test data into its path
+[ 2024-11-12 14:26:06,490 ] 45 root - INFO - read the train and test data
