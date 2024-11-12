@@ -1,0 +1,15 @@
+[ 2024-11-12 18:45:45,326 ] 32 root - INFO - read the data
+[ 2024-11-12 18:45:45,331 ] 35 root - INFO - create a directory
+[ 2024-11-12 18:45:45,342 ] 40 root - INFO - split the data
+[ 2024-11-12 18:45:45,342 ] 44 root - INFO - pass the train data its path
+[ 2024-11-12 18:45:45,358 ] 46 root - INFO - pass the test data into its path
+[ 2024-11-12 18:45:45,376 ] 153 root - INFO - Reading the train and test data
+[ 2024-11-12 18:45:45,406 ] 162 root - INFO - Getting the preprocessor for transforming train and test data to the same format
+[ 2024-11-12 18:45:45,406 ] 114 root - INFO - Getting the data transformation based on the data
+[ 2024-11-12 18:45:45,406 ] 165 root - INFO - Dropping the target column from the train and test datasets
+[ 2024-11-12 18:45:45,414 ] 171 root - INFO - Applying the preprocessor object to transform train and test data
+[ 2024-11-12 18:45:45,425 ] 175 root - INFO - Combining the target and independent features
+[ 2024-11-12 18:45:45,430 ] 26 root - INFO - Splitting train and test arrays into features and labels.
+[ 2024-11-12 18:45:45,430 ] 39 root - INFO - Evaluating models.
+[ 2024-11-12 18:45:45,437 ] 43 root - INFO - Best model score: 0.7095588235294118
+[ 2024-11-12 18:45:45,437 ] 58 root - INFO - Making predictions with the best model.

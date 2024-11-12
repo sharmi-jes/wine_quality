@@ -18,20 +18,40 @@ def save_object(file_path,obj):
         raise CustomException(e,sys)
     
 
-def evaluate_models(x_train,x_test,y_train,y_test,models):
+def evaluate_models(x_train,x_test,y_train,y_test,models,params):
     try:
         report={}
-        for model_name,model in models.items():
-         model.fit(x_train,y_train)
+        for model_name, model in models.items():
+            param_grid = params.get(model_name, {})  # Get params for the specific model
 
-         y_train_pred=model.predict(x_train)
-         y_test_pred=model.predict(x_test)
+            # Initialize GridSearchCV with model and its parameters
+            gs = GridSearchCV(model, param_grid, cv=3)
+            gs.fit(x_train, y_train)
 
-         y_train_accuracy=accuracy_score(y_train,y_train_pred)
-         y_test_accuracy=accuracy_score(y_test,y_test_pred)
+            # Set best parameters and train model
+            model.set_params(**gs.best_params_)
+            # model.fit(x_train, y_train)
 
-         report[model_name]=y_test_accuracy
+            # Predictions and scoring
+            y_train_pred = model.predict(x_train)
+            y_test_pred = model.predict(x_test)
+            r2_score_train = accuracy_score(y_train, y_train_pred)
+            r2_score_test = accuracy_score(y_test, y_test_pred)
 
-         return report
+            # Save the test score in the report
+            report[model_name] = r2_score_test
+
+        return report  # Return after evaluating all models
+
     except Exception as e:
-        raise CustomException(e,sys)
+        raise CustomException(e, sys)
+
+
+def load_object(file_path):
+    try:
+        with open(file_path, "rb") as file_obj:
+            return pickle.load(file_obj)
+
+    except Exception as e:
+        raise CustomException(e, sys)
+

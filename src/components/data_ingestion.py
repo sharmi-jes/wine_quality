@@ -30,7 +30,7 @@ class DataIngestion:
     def initiate_data_ingestion(self):
         try:
             logging.info("read the data")
-            df=pd.read_csv(r"D:\RESUME ML PROJECTS\WINE_QUALITY\notebooks\wine_quality\winequality-red.csv")
+            df=pd.read_csv(r"D:\RESUME ML PROJECTS\WINE_QUALITY\notebooks\cleandata.csv")
 
             logging.info("create a directory")
             os.makedirs(os.path.dirname(self.ingestion_config.train_data_path),exist_ok=True)
