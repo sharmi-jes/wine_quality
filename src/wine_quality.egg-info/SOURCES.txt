@@ -6,6 +6,11 @@ src/logger.py
 src/utils.py
 src/components/__init__.py
 src/components/data_ingestion.py
+src/components/data_transformation.py
+src/components/model_training.py
+src/pipeline/__init__.py
+src/pipeline/predict_pipeline.py
+src/pipeline/training_pipeline.py
 src/wine_quality.egg-info/PKG-INFO
 src/wine_quality.egg-info/SOURCES.txt
 src/wine_quality.egg-info/dependency_links.txt

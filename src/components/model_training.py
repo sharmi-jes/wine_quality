@@ -35,37 +35,37 @@ class ModelTrainer:
                 "AdaBoost": AdaBoostClassifier()
             }
 
-            params = {
+            # params = {
                
-                "RandomForest": {
-                    'n_estimators': [100, 200, 300],
-                    'max_depth': [10, 20, 30, None],
-                    'min_samples_split': [2, 5, 10],
-                    'min_samples_leaf': [1, 2, 4],
-                    'max_features': ['auto', 'sqrt', 'log2'],
-                    'bootstrap': [True, False],
-                    'class_weight': [None, 'balanced'],
-                    'random_state': [42]
-                },
-                "GradientBoosting": {
-                    'n_estimators': [100, 200, 300],
-                    'learning_rate': [0.01, 0.1, 0.5],
-                    'max_depth': [3, 4, 5],
-                    'min_samples_split': [2, 5, 10],
-                    'min_samples_leaf': [1, 2, 4],
-                    'subsample': [0.8, 1.0],
-                    'random_state': [42]
-                },
-                "AdaBoost": {
-                    'n_estimators': [50, 100, 200],
-                    'learning_rate': [0.01, 0.1, 1.0],
-                    'random_state': [42]
-                }
-            }
+            #     "RandomForest": {
+            #         'n_estimators': [100, 200, 300],
+            #         'max_depth': [10, 20, 30, None],
+            #         'min_samples_split': [2, 5, 10],
+            #         'min_samples_leaf': [1, 2, 4],
+            #         'max_features': ['auto', 'sqrt', 'log2'],
+            #         'bootstrap': [True, False],
+            #         'class_weight': [None, 'balanced'],
+            #         'random_state': [42]
+            #     },
+            #     "GradientBoosting": {
+            #         'n_estimators': [100, 200, 300],
+            #         'learning_rate': [0.01, 0.1, 0.5],
+            #         'max_depth': [3, 4, 5],
+            #         'min_samples_split': [2, 5, 10],
+            #         'min_samples_leaf': [1, 2, 4],
+            #         'subsample': [0.8, 1.0],
+            #         'random_state': [42]
+            #     },
+            #     "AdaBoost": {
+            #         'n_estimators': [50, 100, 200],
+            #         'learning_rate': [0.01, 0.1, 1.0],
+            #         'random_state': [42]
+            #     }
+            # }
 
             logging.info("Evaluating models.")
             # Here, you should ensure that evaluate_models handles model selection, tuning, etc.
-            model_report = evaluate_models(x_train=x_train, x_test=x_test, y_train=y_train, y_test=y_test, models=models, params=params)
+            model_report = evaluate_models(x_train=x_train, x_test=x_test, y_train=y_train, y_test=y_test, models=models)
             
             best_score = max(model_report.values())
             logging.info(f"Best model score: {best_score}")
