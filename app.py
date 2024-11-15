@@ -38,6 +38,7 @@ def predict_datapoint():
         print("Making prediction...")
         results = predict_pipeline.predict(pred_df)
         print("Prediction made")
+        print(results[0])
 
         # Return results to the home page
         return render_template('home.html', results=results[0])  # Show the first result
