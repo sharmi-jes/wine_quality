@@ -5,4 +5,6 @@ seaborn
 scikit-learn
 dill
 Flask
+gunicorn
+
 -e .
